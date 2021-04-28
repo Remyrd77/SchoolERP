@@ -1,1 +1,8 @@
-<p>timesheet works!</p>
+<ng-container>
+    <div class="div">Fill Timesheet</div>
+    <mat-form-field color="accent" appearance="fill">
+        <input matInput [matDatepicker]="picker1" placeholder="Select Date" (dateInput)="fillAttendence($event)" (dateChange)="changeEvent($event)">
+        <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+        <mat-datepicker #picker1></mat-datepicker>
+    </mat-form-field>
+</ng-container>

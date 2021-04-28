@@ -7,6 +7,7 @@ export const environment = {
   firebaseConfig: {
     apiKey: "AIzaSyAennIAOzqQk8O7jp3_Vp-fuOB2GAZiGbE",
     authDomain: "schoolerp-f0e3c.firebaseapp.com",
+    databaseURL: "https://schoolerp-f0e3c-default-rtdb.firebaseio.com",
     projectId: "schoolerp-f0e3c",
     storageBucket: "schoolerp-f0e3c.appspot.com",
     messagingSenderId: "853284586579",

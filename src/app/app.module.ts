@@ -6,25 +6,20 @@ import { AppRoutingModule } from './app-routing.module';
 import { environment } from '../environments/environment';
 
 import { AppComponent } from './app.component';
-import { PagesComponent } from './pages/pages.component';
-import { DashboardComponent } from './pages/dashboard/dashboard.component';
-import { TimesheetComponent } from './pages/timesheet/timesheet.component';
-import { LeavesComponent } from './pages/leaves/leaves.component';
-import { LoginComponent } from './login/login.component';
 
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireDatabaseModule } from '@angular/fire/database'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LoginComponent } from './login/login.component';
 import { AuthService } from './shared/services/auth-service';
-
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { UserService } from './shared/services/user-service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PagesComponent,
-    DashboardComponent,
-    TimesheetComponent,
-    LeavesComponent,
     LoginComponent
   ],
   imports: [
@@ -33,10 +28,13 @@ import { AuthService } from './shared/services/auth-service';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
     AngularFireAuthModule,
+    AngularFireDatabaseModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    NgbModule,
   ],
-  providers: [AuthService],
+  providers: [AuthService, UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,7 +1,20 @@
 export interface User {
-    uid: string;
+    "firstName": string;
+    "lastName": string;
+    "leaveBalance": number;
+    "phone": string;
+    "supervisor": string;
+}
+
+export interface User1 {
+    attendenceDates: Date;
     email: string;
-    displayName: string;
-    photoURL: string;
-    emailVerified: boolean;
+    firstName: string;
+    lastName: string;
+    leaves: Leaves[];
+    phone: string;
+}
+export interface Leaves {
+    "balanceLeave": number;
+    "totalDaysOff": number;
 }

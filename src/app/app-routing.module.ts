@@ -6,11 +6,8 @@ import { LeavesComponent } from './pages/leaves/leaves.component';
 import { TimesheetComponent } from './pages/timesheet/timesheet.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/login', pathMatch: 'full' },
-  { path: 'login', component: LoginComponent },
-  { path: 'dashboard', component: DashboardComponent },
-  { path: 'leaves', component: LeavesComponent },
-  { path: 'timesheet', component: TimesheetComponent }
+  { path: '', loadChildren: () => import('./pages/pages.module').then(m => m.PagesModule) },
+  { path: 'login', component: LoginComponent }
 ];
 
 @NgModule({

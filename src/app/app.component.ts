@@ -11,15 +11,14 @@ export class AppComponent implements OnInit {
   isUserLoggedIn = false;
   constructor(public router: Router) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.getLoggedInuser();
   }
-
   getLoggedInuser() {
     if (localStorage.getItem('user') !== null) {
       this.isUserLoggedIn = true;
-      this.router.navigate(['dashboard']);
+      this.router.navigate(['/dashboard']);
     } else
-      this.router.navigate(['login']);
+      this.router.navigate(['/login']);
   }
 }
