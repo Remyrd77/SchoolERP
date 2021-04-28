@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "schoolerp-f0e3c": {
+      "hosting": {
+        "SchoolERP": [
+          "schoolerp-f0e3c"
+        ]
+      }
+    }
+  }
+}
